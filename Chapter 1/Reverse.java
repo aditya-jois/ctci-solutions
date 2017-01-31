@@ -11,5 +11,13 @@ public class Reverse {
 			System.out.print(reversed[i]);
 		}
 	}
+	
+	public String reverse1(String toReverse) {
+		StringBuilder reversed = new StringBuilder();
+		for (int i = toReverse.length() - 1; i >= 0; i--) {
+			reversed.append(toReverse.charAt(i));
+		}
+		return reversed.toString();
+	}
 
 }
