@@ -1,5 +1,12 @@
 public class RemoveDuplicates {
 	
+	public static void main(String[] args) {
+		RemoveDuplicates rd = new RemoveDuplicates();
+		System.out.println(rd.removeDuplicateCharacters("aabbccdd"));
+		System.out.println(rd.removeDuplicates1("aabbccdd".toCharArray()));
+		System.out.println(rd.removeDuplicates2("aabbccdd".toCharArray()));
+	}
+	
 	public String removeDuplicateCharacters(String value) {
 		if (null == value) {
 			return value;
@@ -22,13 +29,13 @@ public class RemoveDuplicates {
 	/*
 	 * Time Complexity: O(N^2)
 	 */
-	public void removeDuplicates1(char[] str) {
+	public char[] removeDuplicates1(char[] str) {
 		if (null == str) {
-			return;
+			return str;
 		}
 		int len = str.length;
 		if (len < 2) {
-			return;
+			return str;
 		}
 		int tail = 1;
 		for (int i = 1; i < len; ++i) {
@@ -43,19 +50,25 @@ public class RemoveDuplicates {
 				++tail;
 			}
 		}
-		str[tail] = 0;
+		for (int k = tail;; k++) {
+			str[k] = 0;
+			if (k == len - 1) {
+				break;
+			}
+		}
+		return str;
 	}
 	
 	/*
 	 * A better solution
 	 */
-	public void removeDuplicates2(char[] str) {
+	public char[] removeDuplicates2(char[] str) {
 		if (null == str) {
-			return;
+			return str;
 		}
 		int len = str.length;
 		if (len < 2) {
-			return;
+			return str;
 		}
 		boolean[] hit = new boolean[256];
 		hit[str[0]] = true;
@@ -67,7 +80,13 @@ public class RemoveDuplicates {
 				hit[str[i]] = true;
 			}
 		}
-		str[tail] = 0;
+		for (int j = tail;; j++) {
+			str[j] = 0;
+			if (j == len - 1) {
+				break;
+			}
+		}
+		return str;
 	}
 
 }
