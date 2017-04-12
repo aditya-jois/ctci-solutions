@@ -19,5 +19,21 @@ public class Reverse {
 		}
 		return reversed.toString();
 	}
+	
+	public char[] reverseInPlace(char[] toReverse) {
+		if (null == toReverse) {
+			return toReverse;
+		}
+		int length = toReverse.length;
+		if (length == 1) {
+			return toReverse;
+		}
+		for (int i = 0, j = length - 1; i < length / 2; i++,j--) {
+			char temp = toReverse[i];
+			toReverse[i] = toReverse[j];
+			toReverse[j] = temp;
+		}
+		return toReverse;
+	}
 
 }
