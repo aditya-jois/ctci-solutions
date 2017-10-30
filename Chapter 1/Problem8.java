@@ -1,3 +1,5 @@
+// Assume you have isSubstring, check if one string is a rotation of the other
+
 public class Problem8 {
 
 	public static void main(String[] args) {
