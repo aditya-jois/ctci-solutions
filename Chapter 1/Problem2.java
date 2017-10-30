@@ -1,3 +1,4 @@
+// Method to reverse a null-terminated string
 public class Reverse {
 
 	public static void main(String[] args) {
