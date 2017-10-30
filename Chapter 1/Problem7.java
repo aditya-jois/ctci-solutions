@@ -1,3 +1,5 @@
+// If element in a matrix is zero, set whole row and column to zero
+
 public class Problem7 {
 	public static void main(String[] args) {
 		int[][] matrix = {{1,2},{4,0},{7,8}};
