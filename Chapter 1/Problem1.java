@@ -1,6 +1,8 @@
+// Algorithm to determine if a string has all unique characters; without additional data structures
+
 //Refer http://www.asciitable.com/
 
-/**
+	/**
 	 * Time Complexity: O(n); n = value.length();
 	 * Space Complexity: O(1)
 	 * Applicable to ASCII character set.
@@ -29,7 +31,7 @@
 		return true;
 	}
   
-  /**
+	/**
 	 * Time Complexity: O(n); n = value.length();
 	 * Space Complexity: Reduced by a factor of 8 by using a bit vector
 	 * Applicable to ASCII character set lower case characters a-z
