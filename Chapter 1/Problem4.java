@@ -1,4 +1,4 @@
-// Method to replace all spaces with '%20'
+// Method to replace all spaces with '%20' assuming string has extra space at the end
 
 public class Problem4 {
 
