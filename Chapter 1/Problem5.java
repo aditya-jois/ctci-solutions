@@ -1,3 +1,5 @@
+// Method to perform basic string compression
+
 public class Problem5 {
 
 	public static void main(String[] args) {
